@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FiBriefcase, FiBookOpen, FiAward, FiCheckCircle } from "react-icons/fi";
+import profileImg from "./profile.png";
 
 const EXPERIENCES = [
   {
@@ -60,10 +61,9 @@ export default function About() {
           <div className="glass-card overflow-hidden rounded-2xl p-6">
             <div className="flex items-center gap-4 mb-4">
               <img
-                src="/public/images/profile.jpg"
+                src={profileImg}
                 alt="Shivakumar C Profile"
                 loading="lazy"
-                onError={(e) => { e.target.src = "../public/images/profile.png"; }}
                 className="h-14 w-14 rounded-full border border-zinc-700 object-cover shrink-0"
               />
               <div>

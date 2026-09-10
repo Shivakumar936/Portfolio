@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { FiArrowDown, FiGithub, FiLinkedin, FiFolder, FiMail } from "react-icons/fi";
+import profileImg from "./profile.png";
 
 export default function Hero() {
   return (
@@ -37,12 +38,9 @@ export default function Hero() {
       >
         <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-zinc-700 via-white to-zinc-700 opacity-30 blur-md transition group-hover:opacity-100" />
         <img
-          src="/images/profile.jpg"
+          src={profileImg}
           alt="Shivakumar C"
           loading="eager"
-          onError={(e) => {
-            e.target.src = "/public/images/profile.png";
-          }}
           className="relative h-24 w-24 sm:h-32 sm:w-32 rounded-full border-2 border-zinc-700 bg-zinc-900 object-cover p-1 shadow-2xl transition-transform hover:scale-105"
         />
       </motion.div>
