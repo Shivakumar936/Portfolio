@@ -27,8 +27,13 @@ export default function Navbar() {
         }`}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 sm:px-6">
-        <a href="#top" className="group flex items-center gap-2 text-base sm:text-lg font-bold tracking-tight text-white">
-          <span className="mt-1 text-2xl font-extrabold tracking-tight text-white sm:text-3xl md:text-4xl lg:text-4.6xl">Portfolio</span>
+        <a
+          href="#top"
+          className="group flex items-center gap-2 text-base sm:text-lg font-bold tracking-tight text-white"
+        >
+          <span className="mt-1 text-2xl font-extrabold tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl">
+            Portfolio
+          </span>
         </a>
 
         {/* Desktop Links */}
@@ -64,6 +69,15 @@ export default function Navbar() {
             className="rounded-full border border-zinc-800 bg-zinc-900/60 p-2 text-zinc-400 transition-all hover:border-zinc-500 hover:text-white"
           >
             <FiLinkedin size={16} />
+          </a>
+          {/* Resume Button */}
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full border border-white/20 px-4 py-2 text-xs font-semibold text-white hover:bg-white hover:text-black transition-all"
+          >
+            Resume
           </a>
           <a
             href="#contact"
@@ -120,6 +134,15 @@ export default function Navbar() {
               </a>
             </div>
             <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileMenuOpen(false)}
+              className="mt-4 block rounded-full border border-white/20 px-5 py-3 text-center text-sm font-semibold text-white hover:bg-white hover:text-black transition-all"
+            >
+              Resume
+            </a>
+            <a
               href="#contact"
               onClick={() => setMobileMenuOpen(false)}
               className="rounded-full bg-white px-5 py-2 text-xs font-semibold text-black"
@@ -132,5 +155,3 @@ export default function Navbar() {
     </header>
   );
 }
-
-

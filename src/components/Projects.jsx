@@ -18,8 +18,8 @@ const INITIAL_PROJECTS = [
       "Express middleware validation and global error handling"
     ],
     tags: ["Node.js", "Express.js", "MongoDB", "Mongoose", "EJS", "Cloudinary"],
-    live: "https://github.com/Shivakumar936",
-    repo: "https://github.com/Shivakumar936/airbnb-clone",
+    live: "https://wanderlust-airbnb-rn8f.onrender.com/listings",
+    repo: "https://github.com/Shivakumar936/Airbnb-fullstack",
     type: "airbnb"
   },
   {
@@ -36,8 +36,8 @@ const INITIAL_PROJECTS = [
       "Reusable React components with empty states & async loaders"
     ],
     tags: ["React.js", "JavaScript", "Node.js", "REST APIs", "JWT", "CSS3"],
-    live: "https://github.com/Shivakumar936",
-    repo: "https://github.com/Shivakumar936/risk-assessment-engine",
+    live: "https://risk-frontend.onrender.com/",
+    repo: "https://github.com/Shivakumar936/risk-assessment-engine-",
     type: "risk"
   },
   {
@@ -54,10 +54,34 @@ const INITIAL_PROJECTS = [
       "Comprehensive async error handling and empty search states"
     ],
     tags: ["React.js", "JavaScript", "REST API", "State Management", "CSS3"],
-    live: "https://github.com/Shivakumar936",
-    repo: "https://github.com/Shivakumar936/weather-app",
+    live: "https://weather-app-react-001.vercel.app/",
+    repo: "https://github.com/Shivakumar936/weather-app-react-001",
     type: "weather"
-  }
+  },
+  {
+  id: "gemini-ai-flash",
+  title: "Gemini AI Flash",
+  category: "AI Web Application",
+  badge: "Generative AI",
+  image: "/images/gemini-ai.jpg",
+  desc: "A modern AI chatbot built with React.js and the Gemini Flash API, supporting real-time conversations, markdown responses, code highlighting, and a responsive dark/light UI.",
+  highlights: [
+    "Real-time AI chat using Gemini Flash API",
+    "Markdown rendering with syntax-highlighted code blocks",
+    "Responsive dark & light theme with modern UI",
+    "Loading states, error handling, and reusable React components"
+  ],
+  tags: [
+    "React.js",
+    "Gemini API",
+    "JavaScript",
+    "Markdown",
+    "CSS3"
+  ],
+  live: "https://geminiai-flash.vercel.app/",
+  repo: "https://github.com/Shivakumar936/Geminiai-Flash",
+  type: "ai"
+}
 ];
 
 export default function Projects() {
@@ -171,17 +195,6 @@ export default function Projects() {
             {/* Content Body */}
             <div className="flex flex-1 flex-col justify-between p-6">
               <div>
-                <div className="flex items-center justify-between gap-2">
-                  <span className="font-mono text-xs text-zinc-400">{project.category}</span>
-                  <button
-                    onClick={(e) => handleEditLink(project, e)}
-                    title="Add / Edit Project Link"
-                    className="flex items-center gap-1 rounded-md border border-zinc-800 bg-zinc-900 px-2 py-1 text-[11px] font-medium text-zinc-300 transition-colors hover:border-white hover:text-white"
-                  >
-                    <FiEdit3 size={12} /> Edit Link
-                  </button>
-                </div>
-
                 <h3
                   onClick={() => setActive(project)}
                   className="mt-2 text-xl font-bold text-white hover:text-zinc-300 cursor-pointer transition-colors"

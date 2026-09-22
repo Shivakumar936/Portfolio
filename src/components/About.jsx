@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FiBriefcase, FiBookOpen, FiAward, FiCheckCircle } from "react-icons/fi";
-import profileImg from "./profile.png";
+const profileImg = "/profile.png";
 
 const EXPERIENCES = [
   {
@@ -68,11 +68,11 @@ export default function About() {
               />
               <div>
                 <h3 className="text-lg font-bold text-white">Shivakumar C</h3>
-                <span className="text-xs font-mono text-zinc-400">Full-Stack Engineer • VTU</span>
+                <span className="text-xs font-mono text-zinc-400">AI-Full-Stack Engineer • VTU</span>
               </div>
             </div>
             <p className="text-xs sm:text-sm leading-relaxed text-zinc-300">
-              Computer Science Engineering graduate with hands-on experience in
+              Computer Science Engineering graduate with hands-on experience developing AI-powered and full-stack web applications using
               <strong className="text-white"> HTML5,CSS3,JavaScript, React.js, Node.js, Express.js, REST APIs, MongoDB, MySQL, and PostgreSQL</strong>.
             </p>
             <p className="mt-3 text-xs sm:text-sm leading-relaxed text-zinc-400">

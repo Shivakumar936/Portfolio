@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { FiArrowDown, FiGithub, FiLinkedin, FiFolder, FiMail } from "react-icons/fi";
-import profileImg from "./profile.png";
+const profileImg = "/profile.png";
 
 export default function Hero() {
   return (
@@ -26,7 +26,7 @@ export default function Hero() {
           <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
           <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
         </span>
-        <span>Open for Full-Stack & Software Engineering Roles</span>
+        <span>Open for AI-Full-Stack & Software Engineering Roles</span>
       </motion.div>
 
       {/* Profile Image with subtle ring */}
@@ -64,11 +64,11 @@ export default function Hero() {
       >
         <TypeAnimation
           sequence={[
-            "Full-Stack Developer",
+            "AI-Full-Stack Developer",
             2000,
             "React.js & Node.js Engineer",
             2000,
-            "RESTful API & Database Specialist",
+            "RESTful API & Database",
             2000,
             "B.E. Computer Science Graduate",
             2000,
@@ -84,8 +84,20 @@ export default function Hero() {
         transition={{ duration: 0.6, delay: 0.4 }}
         className="mt-6 max-w-2xl text-balance text-base leading-relaxed text-zinc-400 sm:text-lg"
       >
-        Computer Science Engineer with expertise in building robust web applications,
-        scalable REST APIs, and database architectures using <span className="text-white font-medium">JavaScript, React.js, Node.js, Express, MongoDB,</span> and <span className="text-white font-medium">MySQL</span>.
+        AI Full-Stack Developer & Computer Science Engineer with expertise in building
+        intelligent, scalable web applications, robust REST APIs, and modern database
+        architectures using{" "}
+        <span className="text-white font-medium">
+          JavaScript, React.js, Node.js, Express.js, MongoDB, PostgreSQL,
+        </span>{" "}
+        and{" "}
+        <span className="text-white font-medium">MySQL</span>. Passionate about
+        integrating{" "}
+        <span className="text-white font-medium">
+          Generative AI (Gemini/cloud/OpenAI)
+        </span>{" "}
+        to create production-ready software with clean architecture, responsive user
+        experiences, and cloud-ready full-stack solutions.
       </motion.p>
 
       {/* CTA Buttons */}
