@@ -1,9 +1,16 @@
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
-import { FiArrowDown, FiGithub, FiLinkedin, FiFolder, FiMail } from "react-icons/fi";
-const profileImg = "/profile.png";
+import {
+  FiArrowDown,
+  FiGithub,
+  FiLinkedin,
+  FiFolder,
+  FiMail,
+  FiFileText,
+} from "react-icons/fi";
+import profileImg from "/profile.png";
 
-export default function Hero() {
+export default function Hero({ onOpenResume }) {
   return (
     <section
       id="top"
@@ -84,20 +91,19 @@ export default function Hero() {
         transition={{ duration: 0.6, delay: 0.4 }}
         className="mt-6 max-w-2xl text-balance text-base leading-relaxed text-zinc-400 sm:text-lg"
       >
-        AI Full-Stack Developer & Computer Science Engineer with expertise in building
-        intelligent, scalable web applications, robust REST APIs, and modern database
-        architectures using{" "}
+        AI Full-Stack Developer & Computer Science Engineer with expertise in
+        building intelligent, scalable web applications, robust REST APIs, and
+        modern database architectures using{" "}
         <span className="text-white font-medium">
           JavaScript, React.js, Node.js, Express.js, MongoDB, PostgreSQL,
         </span>{" "}
-        and{" "}
-        <span className="text-white font-medium">MySQL</span>. Passionate about
-        integrating{" "}
+        and <span className="text-white font-medium">MySQL</span>. Passionate
+        about integrating{" "}
         <span className="text-white font-medium">
           Generative AI (Gemini/cloud/OpenAI)
         </span>{" "}
-        to create production-ready software with clean architecture, responsive user
-        experiences, and cloud-ready full-stack solutions.
+        to create production-ready software with clean architecture, responsive
+        user experiences, and cloud-ready full-stack solutions.
       </motion.p>
 
       {/* CTA Buttons */}
@@ -112,6 +118,20 @@ export default function Hero() {
           className="btn-primary flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold"
         >
           <FiFolder size={17} /> View Projects & Links
+        </a>
+        <a
+          href="/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={(e) => {
+            if (onOpenResume && !e.ctrlKey && !e.metaKey && !e.shiftKey && e.button === 0) {
+              e.preventDefault();
+              onOpenResume();
+            }
+          }}
+          className="btn-secondary flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-medium hover:border-zinc-500 hover:text-white cursor-pointer"
+        >
+          <FiFileText size={17} /> View Resume
         </a>
         <a
           href="#contact"
@@ -162,4 +182,3 @@ export default function Hero() {
     </section>
   );
 }
-

@@ -9,7 +9,7 @@ const LINKS = [
   { href: "#contact", label: "Contact" },
 ];
 
-export default function Navbar() {
+export default function Navbar({ onOpenResume }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -31,7 +31,7 @@ export default function Navbar() {
           href="#top"
           className="group flex items-center gap-2 text-base sm:text-lg font-bold tracking-tight text-white"
         >
-          <span className="mt-1 text-2xl font-extrabold tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl">
+          <span className="mt-1 text-2xl font-extrabold tracking-tight text-white sm:text-3xl md:text-4xl lg:text-4.6xl">
             Portfolio
           </span>
         </a>
@@ -75,7 +75,13 @@ export default function Navbar() {
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full border border-white/20 px-4 py-2 text-xs font-semibold text-white hover:bg-white hover:text-black transition-all"
+            onClick={(e) => {
+              if (onOpenResume && !e.ctrlKey && !e.metaKey && !e.shiftKey && e.button === 0) {
+                e.preventDefault();
+                onOpenResume();
+              }
+            }}
+            className="rounded-full border border-white/20 px-4 py-2 text-xs font-semibold text-white hover:bg-white hover:text-black transition-all cursor-pointer"
           >
             Resume
           </a>
@@ -137,8 +143,14 @@ export default function Navbar() {
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => setMobileMenuOpen(false)}
-              className="mt-4 block rounded-full border border-white/20 px-5 py-3 text-center text-sm font-semibold text-white hover:bg-white hover:text-black transition-all"
+              onClick={(e) => {
+                setMobileMenuOpen(false);
+                if (onOpenResume && !e.ctrlKey && !e.metaKey && !e.shiftKey && e.button === 0) {
+                  e.preventDefault();
+                  onOpenResume();
+                }
+              }}
+              className="mt-4 block rounded-full border border-white/20 px-5 py-3 text-center text-sm font-semibold text-white hover:bg-white hover:text-black transition-all cursor-pointer"
             >
               Resume
             </a>
